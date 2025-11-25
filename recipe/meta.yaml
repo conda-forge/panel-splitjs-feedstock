@@ -1,6 +1,5 @@
 {% set name = "panel-splitjs" %}
 {% set version = "0.2.1" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -11,22 +10,22 @@ source:
   sha256: 84df543cf1a58d2691cc64f9c109ce0e874b20403deb3ab4c5dbf0d958e88f74
 
 build:
-  noarch: python
+  skip: True # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - hatchling
     - hatch-vcs
     - panel >=1.8.0
-    - nodejs >=22.*
-    - esbuild
+    - nodejs 24.*
+    - esbuild 0.25.4
     - packaging
     - pip
   run:
-    - python >={{ python_min }}
+    - python
     - panel >=1.8.0
     - bokeh >=3.8.0
     - packaging
@@ -37,7 +36,6 @@ test:
   commands:
     - pip check
   requires:
-    - python {{ python_min }}
     - pip
 
 about:
@@ -46,7 +44,9 @@ about:
   dev_url: https://github.com/panel-extensions/panel-splitjs
   license: BSD-3-Clause
   license_file: LICENSE.txt
-
+  license_family: BSD
+  dev_url: https://github.com/panel-extensions/panel-splitjs
+  doc_url: https://github.com/panel-extensions/panel-splitjs
 
 extra:
   recipe-maintainers:
