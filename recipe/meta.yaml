@@ -1,5 +1,5 @@
 {% set name = "panel-splitjs" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/panel_splitjs-{{ version }}.tar.gz
-  sha256: e5038f7cf37b12b72ef52ac44ff53fd8a72bd111a0ffe28afc1b9fac3450604a
+  sha256: da8cfea958d1507a085e74804a8b28e9b7c3c9964ff9aa4ce7d46a22c0cf6cd4
 
 build:
   noarch: python
