@@ -1,5 +1,5 @@
 {% set name = "panel-splitjs" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/a5/21/c378f66069364c15aac99fd115a1b2453e7ce210d9f628faf080fe5a2593/panel_splitjs-{{ version }}.tar.gz
-  sha256: d332ee30fbf0c59a9013df58214db3dc88651524a1a41d3c420a1cb3cb6766e3
+  url: https://files.pythonhosted.org/packages/13/7b/2561475e74528bbe544508fe36578d6790f546fa221d5ff412b2ab4e3f97/panel_splitjs-{{ version }}.tar.gz
+  sha256: 20ca66163debeba9e51b763406d69c41555ec37f04edda1c36133574e048f16b
 
 build:
   noarch: python
